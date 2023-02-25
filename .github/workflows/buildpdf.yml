@@ -10,8 +10,15 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: abstract.tex
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v3
+    steps:
+      - uses: actions/setup-python@v4
         with:
-          name: PDF
-          path: abstract.pdf
+          python-version: '3.10'
+      - run: |
+          python -m pip install ghp-import
+          mkdir pages
+          mv abstract.pdf pages/CherianAnderssonLeeRanheimMoore2023abstract.pdf
+          git config --global user.name "Github Actions"
+          git config --global user.email mechmotum@users.noreply.github.com
+          git remote add deploy "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/mechmotum/bmd2023-stable-low-speed-cargobike.git"
+          ghp-import -o -r deploy -b gh-pages -m "Updated via Github Actions" -p pages --no-jekyll
