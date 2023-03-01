@@ -24,7 +24,7 @@ Low Speed Balance of a Cargo Bicycle}
 \addauthor{Anders Ranheim}{2}
 
 % List authors with only initials for given names, displays only in footer.
-\authorfooter{Moore, J. K., Cherian, J. K., Andersson, B., Lee, O., \&
+\authorfooter{Moore, J. K., Koshy Cherian, J., Andersson, B., Lee, O., \&
   Ranheim, A.}
 
 % List affiliations. Call \addaffiliation{id}{name}{EmailOrcidString} once for
@@ -37,15 +37,15 @@ Low Speed Balance of a Cargo Bicycle}
 \addaffiliation{1}{
   Delft University of Technology, The Netherlands
 }{
-  j.koshycherian@student.tudelft.nl;
-  j.kmoore@tudelft.nl, ORCID 0000-0002-8698-6143
+  j.kmoore@tudelft.nl, ORCID 0000-0002-8698-6143;
+  j.koshycherian@student.tudelft.nl, ORCID 0009-0002-2264-8097;
 }
 \addaffiliation{2}{
-  ictech, Sweden
+  Ictech AB, Sweden
 }{
-  bjorn.andersson@ictech.se, ORCID 2222-2222-2222-2222;
-  oliver.lee@ictech.se, ORCID 2222-2222-2222-2222;
-  anders.ranheim@ictech.se, ORCID 3333-3333-3333-3333
+  bjorn.andersson@ictech.se;
+  oliver.lee@ictech.se;
+  anders.ranheim@ictech.se
 }
 
 % The following variables will be updated by the publisher, do not edit.
@@ -96,52 +96,62 @@ stabilizing a single track cargo bicycle at zero and near zero forward speeds.
   \begin{subfigure}{0.45\textwidth}
     \centering
     \includegraphics[height=4cm]{bike-photo.png}
-    \caption{Prototype vehicle with a Bafung 48~\si{\volt} 1000~\si{\watt}
-      motor with added rim mass to maximize the rotational inertia.}
+    \caption{Prototype vehicle with a Bafung motor driven at 48~\si{\volt} with
+      a maximum power of 1500~\si{\watt} and added rim mass to maximize the
+      rotational inertia.}
     \label{fig:bike-photo}
   \end{subfigure}
+  \caption{Vehicle images.}
 \end{figure}
 
 There is a long history of efforts to robotically stabilize single track
-vehicles beginning with Brennan's monorail in the early
-1900's~\citep{Barr1907}, to the motorcycle steer controller of
-\citep{Ruijs1985}, and a too long list of models and demonstration of steer
-control, control moment gryoscopes, reaction wheels, inverted pendulums and the
+vehicles beginning with inventions like Brennan's monorail in the early
+1900's~\citep{Barr1907}, to the motorcycle steer motor control of
+\citep{Ruijs1985}, and a too long list of models and demonstrations of steer
+control, control moment gyroscopes, reaction wheels, inverted pendulums and the
 like. None of these solutions have become commercially viable, so our approach
 tries to focus on the narrow need of near zero speed stabilization. We chose a
-reaction wheel due to the low cost (<\$500), ability to stabilize roll at any
-speed, and the possibility to fit the reaction wheel in a concealed manner in a
-small portion of the cargo space.
+reaction wheel due to the low cost (<\$500), ability to stabilize vehicle roll
+at any speed, and the possibility to fit the reaction wheel in a concealed
+manner in a small portion of the cargo space.
 
 To that end, we have developed a compact reaction wheel that fits in the cargo
 space of a standard cargo bicycle. The reaction wheel is capable of applying
 roll torques up to 200~\si{\newton\meter} to the vehicle, see
 Figure~\ref{fig:cad-model}. This can stabilize the roll degree of freedom at
 zero speed for roll angles up to about 10~\si{\degree}.
-
 Figure~\ref{fig:initial-value-simulation} shows that the reaction wheel can
 stabilize the vehicle from a 2~\si{\degree} disturbance within a second using
 about 200~\si{\joule} and 100~\si{\newton\meter} of peak torque. A modern
-e-bike battery can have 4M joules of energy available for use, so minimizing the
-energy consumption from the reaction wheel while maximizing stability will need
-to be investigated.
+e-bike battery has up to 4M joules of energy available for use so it is
+possible to dedicate a portion of the energy to stabilization during medium
+length trips. Minimizing the energy consumption from the reaction wheel while
+maximizing stability will be investigated further.
 
 \begin{figure}
   \centering
   \includegraphics[width=12cm]{initial-value-simulation.png}
   \caption{Roll stabilization results at zero speed from an initial roll angle
-    of 2~\si{\degree}}
+    of 2~\si{\degree} for a regular bicycle and a cargo bicycle.}
   \label{fig:initial-value-simulation}
 \end{figure}
 
 The reaction wheel has some disadvantages, including significantly increasing
-the mass of the vehicle (10 kg) as well as increasing the complexity and cost.
-The energy consumption can be large when the system is constantly managing large
+the mass of the vehicle as well as increasing the complexity and cost.  The
+energy consumption can be large when the system is constantly managing large
 repeated disturbances, reducing the available range of an e-bike (possibly
 drastically and unexpectedly to the rider). The reaction wheel will generate
 pitching torques during rapid changes in heading (although we expect this to be
-negligible). We will report on the validation and performance of the prototype
-vehicle shown in Figure~\ref{fig:bike-photo} in the conference paper.
+negligible). These disadvantages can be overcome with system optimization.
+
+In the conference paper and presentation, we will report on the model and
+simulation results that demonstrate the practicality of the design as well as
+its limits. We will also report on the performance of the prototype vehicle
+shown in Figure~\ref{fig:bike-photo} in relation to the simulation results.
+
+This research has been made possible with financial support from the Swedish
+Transport Authority ('Skyltfonden'). Their role is purely financial as they
+have no active role in the actual development or of the results obtained.
 
 \bibliographystyle{apalike}
 \bibliography{references.bib}
