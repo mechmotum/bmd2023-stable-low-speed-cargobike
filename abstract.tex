@@ -66,21 +66,22 @@ Low Speed Balance of a Cargo Bicycle}
 \section*{Abstract:}
 
 Cargo bicycle use has grown over the last decade with electrification
-contributing to a rapid growth in the recent years. Increases in "last mile"
-delivery of goods and food requires rapid, versatile vehicles in urban areas.
-These vehicles also allow for green transportation for families.  With the
-growth of safer bicycle infrastructure in many countries, these vehicles can
-replace cars for a variety of short and medium distance activities. One
-particular problem cargo two-wheelers face is that the vehicles are hard to
+contributing to a rapid growth in the recent years.
+With the growth of safer bicycle infrastructure in many countries, these
+vehicles can be a greener, more energy efficient replacement for cars for a
+variety of short and medium distance activities, e.g. "last mile" delivery or
+transportation for families.
+One particular problem cargo two-wheelers face is that the vehicles are hard to
 balance and handle at low and near zero speeds. Delivery people need to quickly
 park their vehicle without the need for a bicycle storage rack or cumbersome
 kickstands for quick door calls. Similarly, parents need to seat and remove
-their children from the vehicle without worrying that it would fall.  Also,
+their children from the vehicle without worrying that it would fall. Also,
 both vehicles come to a stop in traffic many times throughout a trip. At every
-instance near zero speed, assistance in balance would relieve the rider from
-any difficulties of balancing the vehicle. Our goal for this work was to
-develop and test the feasibility of robotically stabilizing a single track
-cargo bicycle at zero and near zero forward speeds.
+instance near zero speed, balance assistance would simplify vehicle operation
+for the rider; even enabling it as a new transportation mode for those with
+limited motor skills and coordination.
+Our goal for this work was to develop and test the feasibility of robotically
+stabilizing a single track cargo bicycle at zero and near zero forward speeds.
 
 \begin{figure}
   \centering
@@ -113,15 +114,15 @@ speed, and the possibility to fit the reaction wheel in a concealed manner in a
 small portion of the cargo space.
 
 To that end, we have developed a compact reaction wheel that fits in the cargo
-space of a standard cargo bicycle capable of applying roll torques to the
-vehicle of up to 200~\si{\newton\meter}, see Figure~\ref{fig:cad-model}. This
-can can stabilize the roll degree of freedom at zero forward speed for lean
-angles up to about 10~\si{\degree}.
+space of a standard cargo bicycle. The reaction wheel is capable of applying
+roll torques up to 200~\si{\newton\meter} to the vehicle, see
+Figure~\ref{fig:cad-model}. This can stabilize the roll degree of freedom at
+zero speed for roll angles up to about 10~\si{\degree}.
 
 Figure~\ref{fig:initial-value-simulation} shows that the reaction wheel can
 stabilize the vehicle from a 2~\si{\degree} disturbance within a second using
 about 200~\si{\joule} and 100~\si{\newton\meter} of peak torque. A modern
-e-bike battery can have 4M joules of energy available for use, so minimize the
+e-bike battery can have 4M joules of energy available for use, so minimizing the
 energy consumption from the reaction wheel while maximizing stability will need
 to be investigated.
 
@@ -133,13 +134,14 @@ to be investigated.
   \label{fig:initial-value-simulation}
 \end{figure}
 
-The reaction wheel has some disadvantages. Reaction wheels necessitate adding
-significant mass to the vehicle (10 kg), it adds complexity and costs, the
-energy consumption can be large when the system is constantly managing large
-repeated disturbances, and the reaction wheel will cause mostly negligible
-pitching torques during rapid changes in heading. We will report on the
-validation and performance of the prototype vehicle shown in
-\ref{fig:bike-photo} in the conference paper.
+The reaction wheel has some disadvantages, including significantly increasing
+the mass of the vehicle (10 kg) as well as increasing the complexity and cost.
+The energy consumption can be large when the system is constantly managing large
+repeated disturbances, reducing the available range of an e-bike (possibly
+drastically and unexpectedly to the rider). The reaction wheel will generate
+pitching torques during rapid changes in heading (although we expect this to be
+negligible). We will report on the validation and performance of the prototype
+vehicle shown in Figure~\ref{fig:bike-photo} in the conference paper.
 
 \bibliographystyle{apalike}
 \bibliography{references.bib}
