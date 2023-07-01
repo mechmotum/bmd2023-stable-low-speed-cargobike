@@ -80,8 +80,8 @@ both vehicles come to a stop in traffic many times throughout a trip. At every
 instance near zero speed, balance assistance would simplify vehicle operation
 for the rider; even enabling it as a new transportation mode for those with
 limited motor skills and coordination.
-Our goal for this work was to develop and test the feasibility of robotically
-stabilizing a single track cargo bicycle at zero and near zero forward speeds.
+Our goal was to develop and test the feasibility of robotically stabilizing a
+single track cargo bicycle at zero and near zero forward speeds.
 
 \begin{figure}
   \centering
@@ -121,18 +121,20 @@ roll torques up to 200~\si{\newton\meter} to the vehicle, see
 Figure~\ref{fig:cad-model}. This can stabilize the roll degree of freedom at
 zero speed for roll angles up to about 10~\si{\degree}.
 Figure~\ref{fig:initial-value-simulation} shows that the reaction wheel can
-stabilize the vehicle from a 2~\si{\degree} disturbance within a second using
-about 200~\si{\joule} and 100~\si{\newton\meter} of peak torque. A modern
-e-bike battery has up to 4M joules of energy available for use so it is
-possible to dedicate a portion of the energy to stabilization during medium
-length trips. Minimizing the energy consumption from the reaction wheel while
-maximizing stability will be investigated further.
+stabilize the vehicle from a 2~\si{\degree} and 50~\si{\newton\meter}
+disturbance within two seconds using about 100~\si{\joule} and
+50~\si{\newton\meter} of peak torque. A modern e-bike battery has up to 4M
+joules of energy available for use so it is possible to dedicate a portion of
+the energy to stabilization during medium length trips. Minimizing the energy
+consumption from the reaction wheel while maximizing stability will be
+investigated further.
 
 \begin{figure}
   \centering
-  \includegraphics[width=12cm]{initial-value-simulation.png}
+  \includegraphics[width=6in]{initial-value-simulation.png}
   \caption{Roll stabilization results at zero speed from an initial roll angle
-    of 2~\si{\degree} for a regular bicycle and a cargo bicycle.}
+    of 2~\si{\degree} and a pulse roll torque perturbation showing the reaction
+    wheel controller behavior: angle, torque, power, and energy consumption.}
   \label{fig:initial-value-simulation}
 \end{figure}
 
@@ -144,14 +146,13 @@ drastically and unexpectedly to the rider). The reaction wheel will generate
 pitching torques during rapid changes in heading (although we expect this to be
 negligible). These disadvantages can be overcome with system optimization.
 
-In the conference paper and presentation, we will report on the model and
-simulation results that demonstrate the practicality of the design as well as
-its limits. We will also report on the performance of the prototype vehicle
-shown in Figure~\ref{fig:bike-photo} in relation to the simulation results.
+In the paper and presentation, we will report on the model and simulation
+results that demonstrate the practicality of the design as well as its limits.
+We will also report on the performance of the prototype shown in
+Figure~\ref{fig:bike-photo} in relation to the simulation results.
 
-This research has been made possible with financial support from the Swedish
-Transport Authority ('Skyltfonden'). Their role is purely financial as they
-have no active role in the actual development or of the results obtained.
+This research has been made possible with financial support from the
+Swedish Transport Authority ('Skyltfonden').
 
 \bibliographystyle{apalike}
 \bibliography{references.bib}
